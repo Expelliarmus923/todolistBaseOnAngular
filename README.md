@@ -1,0 +1,2 @@
+# todolistBaseOnAngular
+基于AngularJs的ToDoList，偷懒把数据直接写到cookie了。
