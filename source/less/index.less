@@ -1,0 +1,177 @@
+@backgroud-color:#020927;
+@main-text-color:#b8b9bd;
+@sub-text-color:#757881;
+@button-color:#ff0034;
+@input-background-color:#0f1632;
+@button-size:75px;
+*{
+	-webkit-tap-highlight-color:rgba(255,255,255,0);
+	-webkit-appearance: none;
+}
+.backgroudColor{
+	width: 100%;
+	height: 100%;
+	background: @backgroud-color;
+	margin: 0;
+	padding: 0;
+	font-family:  Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+.header{
+	&.view{
+		border: 0 none;
+		margin-top: 10px;
+	}
+	text-align: center;
+	h2{
+		margin: 0;
+		padding: 0;
+		color: @main-text-color;
+	}
+	height: 40px;
+	line-height: 40px;
+	border-bottom:1px solid @main-text-color; 
+}
+.container{
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0 15px;
+}
+.main-header{
+	text-align: center;
+	color: @main-text-color;
+}
+.done-true {
+	.todo-title, .todo-time, .todo-content {
+		color: #fff;
+		text-decoration: line-through;
+	}
+
+}
+.todo-title{
+	float: left;
+	h2{
+		color: @main-text-color;
+		font-size: 1em;
+		margin: 0;
+		padding: 0;
+	}
+}
+.todo-time{
+	float: right;
+	span{
+		color: @sub-text-color;
+		font-size: .8em;
+	}
+}
+.todo-content{
+	padding-top: 5px;
+	clear: both;
+	p{
+		color: @sub-text-color;
+		font-size: .8em;
+		margin: 0;
+	}
+}
+.todo-item{
+	padding: 10px 0;
+	border-bottom:1px solid @sub-text-color ;
+}
+.addNew{
+	width: @button-size;
+	height: @button-size;
+	position: fixed;
+	bottom: 10px;
+	left: 50%;
+	margin-left: -@button-size/2;
+	text-align: center;
+	button{
+		width: 100%;
+		height: 100%;
+		background: @button-color;
+		border-radius:50%;
+		outline: none;
+		border: 1px solid @button-color;
+		color: #fff;
+		font-size: 3em;
+	}
+}
+.addItem{
+	width: 100%;
+	height: auto;
+	button{
+		display: block;
+		width: 200px;
+		height: 30px;
+		margin: 10px auto;
+		background: @button-color;
+		color: #fff;
+		border-radius: 5px;
+		line-height: 30px;
+		text-align: center;
+		outline: none;
+		border: 0 none;
+	}
+}
+.addItem-input{
+	margin-top: 5px;
+	&.big{
+		textarea{
+			border-radius: 5px;
+			box-sizing: border-box;
+			width: 100%;
+			height: 100px;
+			color: @sub-text-color;
+			background: @input-background-color;
+			outline: none;
+			border: 0 none;
+			padding: 10px 15px;
+			font-size: 1em;
+		}
+	}
+	input{
+		border-radius: 5px;
+		box-sizing: border-box;
+		width: 100%;
+		height: 30px;
+		color: @sub-text-color;
+		background: @input-background-color;
+		outline: none;
+		border: 0 none;
+		padding: 5px 15px;
+		font-size: 1em;
+	}
+
+}
+//animate
+.item-animiate.ng-enter,
+.item-animiate.ng-leave,
+.item-animiate.ng-move {
+	-webkit-transition: 0.5s linear all;
+	-moz-transition: 0.5s linear all;
+	-o-transition: 0.5s linear all;
+	transition: 0.5s linear all;
+}
+
+.item-animiate.ng-enter,
+.item-animiate.ng-move {
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+}
+
+.item-animiate.ng-move.ng-move-active,
+.item-animiate.ng-enter.ng-enter-active {
+	opacity: 1;
+}
+
+.item-animiate.ng-leave {
+	opacity: 1;
+	overflow: hidden;
+}
+
+.item-animiate.ng-leave.ng-leave-active {
+	opacity: 0;
+	height: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}

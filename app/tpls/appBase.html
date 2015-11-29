@@ -1,0 +1,16 @@
+<div class="header">
+    <h2>ToDo</h2>
+</div>
+<div class="addNew">
+    <button ui-sref="index.add">+</button>
+</div>
+<div class="container">
+    <div class="main-header">
+        <h1>一共<span ng-bind="getLength()"></span>条</h1>
+    </div>
+    <div  ng-repeat="todo in todos" class="todo-item item-animiate done-{{todo.done}} "  ng-swipe-right="remove(todo)" ng-swipe-left="done(todo)">
+        <div class="todo-title"><h2 ng-bind="todo.title">处理上周订单</h2></div>
+        <div class="todo-time"><span>{{ todo.time|date : 'yyyy-MM-dd hh:mm'}}</span></div>
+        <div class="todo-content"><p ng-bind="todo.content">新项目需求分析</p></div>
+    </div>
+</div>
