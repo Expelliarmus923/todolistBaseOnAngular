@@ -1,7 +1,7 @@
 /**
  * Created by lulizhou on 2015/11/21.
  */
-angular.module("app.data",["ui.router","ngCookies"])
+angular.module("app.data",["ui.router","ngCookies","ngAnimate"])
     .factory("Todos",["$cookies",function($cookies){
         var cookietodo = [];
         return{

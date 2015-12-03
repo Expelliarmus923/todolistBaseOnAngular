@@ -1,7 +1,7 @@
 /**
  * Created by lulizhou on 2015/11/21.
  */
-var toDoList=angular.module("toDoList",["ngTouch","ui.router","app.data","ngAnimate-animate.css"]);
+var toDoList=angular.module("toDoList",["ngTouch","ngAnimate","ui.router","app.data"]);
 toDoList.config(function($stateProvider, $urlRouterProvider){
     $urlRouterProvider.otherwise("/main");
     $stateProvider.state("index",{
@@ -11,7 +11,7 @@ toDoList.config(function($stateProvider, $urlRouterProvider){
         .state("index.main",{
             url:"main",
             views:{
-                "appAdd@index":{
+                "appBase@index":{
                     templateUrl:"./tpls/appBase.html",
                     controller:"data"
                 }
@@ -20,7 +20,7 @@ toDoList.config(function($stateProvider, $urlRouterProvider){
         .state("index.add",{
             url:"add",
             views:{
-                "appAdd@index":{
+                "appBase@index":{
                     templateUrl:"./tpls/appAdd.html",
                     controller:"addCtl"
                 }
