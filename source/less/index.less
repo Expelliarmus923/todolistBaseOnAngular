@@ -11,6 +11,12 @@
 body,html{
   width: 100%;
   height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family:"Microsoft Yahei", Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+h1,h2{
+	font-weight: normal;
 }
 .backgroudColor{
 	width: 100%;
@@ -18,7 +24,6 @@ body,html{
 	background: @backgroud-color;
 	margin: 0;
 	padding: 0;
-	font-family:  Menlo, Monaco, Consolas, "Courier New", monospace;
   position: relative;
   overflow: hidden;
 }
@@ -158,6 +163,43 @@ body,html{
 		font-size: 1em;
 	}
 
+}
+.todo-header{
+	width: 100%;
+	height: 150px;
+	background: @backgroud-color;
+	text-align: center;
+	h1{
+		margin: 0;
+		padding: 0;
+		color: #fff;
+		line-height: 200px;
+	}
+}
+.todo-class{
+	ul,li{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+	.todo-class-item{
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		width: 50%;
+		height: 160px;
+		float: left;
+		border-right:1px solid #d5d5d5;
+		border-bottom:1px solid #d5d5d5;
+		text-align: center;
+		h2{
+			padding-top:30px;
+			color: #1d1d26;
+			margin-bottom: 10px;
+		}
+		span{
+			color: #bbb;
+		}
+	}
 }
 //animate
 .item-animate {
